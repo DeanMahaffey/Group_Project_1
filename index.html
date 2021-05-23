@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Worth a Shot</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modalstyle.css">
+</head>
+
+<body>
+    <header class="title">
+        <h1>WORTH A SHOT</h1>
+    </header>
+    <!-- aside with the options for the user to select -->
+    <div class="ingredients">
+        <div class="selectiontitle">Choose an Alcohol:</div>
+        <aside id="alcoholButton">
+            <input type="radio" data-alcohol="gin" name="alcohol" value="gin">
+            <label for="gin">Gin</label>
+            <input type="radio" data-alcohol="vodka" name="alcohol" value="vodka">
+            <label for="vodka">Vodka</label>
+            <input type="radio" data-alcohol="rum" name="alcohol" value="rum">
+            <label for="rum">Rum</label>
+            <input type="radio" data-alcohol="tequila" name="alcohol" value="tequila">
+            <label for="tequila">Tequila</label>
+            <input type="radio" data-alcohol="whiskey" name="alcohol" value="whiskey">
+            <label for="whiskey">Whiskey</label>
+            <input type="radio" data-alcohol="brandy" name="alcohol" value="brandy">
+            <label for="brandy">Brandy</label>
+            <input type="radio" data-alcohol="champagne" name="alcohol" value="champagne">
+            <label for="champagne">Champagne</label>
+        </aside>
+        <div class="selectiontitle">Choose an add-in:</div>
+        <aside id="mixersButton">
+            <input type="radio" data-mixers="sodaWater" name="mixers" value="soda water">
+            <label for="sodaWater">Soda Water</label>
+            <input type="radio" data-mixers="pineappleJuice" name="mixers" value="pineapple juice">
+            <label for="pineappleJuice">Pineapple Juice</label>
+            <input type="radio" data-mixers="orangeJuice" name="mixers" value="orange juice">
+            <label for="orangeJuice">Orange Juice</label>
+            <input type="radio" data-mixers="grapefruitJuice" name="mixers" value="grapefruit juice">
+            <label for="grapefruitJuice">Grapefruit Juice</label>
+            <input type="radio" data-mixers="limeJuice" name="mixers" value="lime juice">
+            <label for="limeJuice">Lime Juice</label>
+            <input type="radio" data-mixers="sweetSour" name="mixers" value="sweet and sour">
+
+            <label for="sweetSour">Sweet and Sour</label>
+            <input type="radio" data-mixers="cocaCola" name="mixers" value="coca-cola">
+            <label for="cocaCola">Coca-Cola</label>
+        </aside>
+
+        <button id="submit" class="submit btn">Submit</button>
+        <div class="drinkHistory">
+            <h2 class="historyTitle">Drink History</h2>
+                <div class="historyList">
+                    <p id="history" class="history1"></p>
+                    <p id="history" class="history2"></p>
+                    <p id="history" class="history3"></p>
+                    <p id="history" class="history4"></p>
+                    <p id="history" class="history5"></p>
+                    <p id="history" class="history6"></p>
+                    <p id="history" class="history7"></p>
+                    <p id="history" class="history8"></p>
+                    <p id="history" class="history9"></p>
+                </div>
+        </div>
+
+    </div>
+    <!-- carousel showing the options that the user has -->
+    <main>
+        <h3>Scroll through available options:</h3>
+        <section class="carousel">
+            <div class="carousel_card carousel_card_visible">
+                <div class="alignmentContainer">
+                    <h4 class="drinktitle" id="titleDisplay"></h4>
+                    <img id="imgDisplay">
+                    <p class="drinkdescription"></p>
+                    <button id="modalBtn" class="modalbtn">Click for Recipe</button>
+                </div>    
+            </div>
+            <div class="carousel_card">
+                <div class="alignmentContainer">
+                    <h4 id="titleDisplay1"></h4>
+                    <img id="imgDisplay1">
+                    <p class="drinkdescription"></p>
+                    <button id="modalBtn" class="modalbtn1">Click for Recipe</button>
+                </div>
+            </div>
+            <div class="carousel_card">
+                <div class="alignmentContainer">
+                    <h4 id="titleDisplay2"></h4>
+                    <img id="imgDisplay2">
+                    <p class="drinkdescription"></p>
+                    <button id="modalBtn" class="modalbtn2">Click for Recipe</button>
+                </div>
+            </div>
+            <div class="carousel_card">
+                <div class="alignmentContainer">
+                    <h4 id="titleDisplay3"></h4>
+                    <img id="imgDisplay3">
+                    <p class="drinkdescription"></p>
+                    <button id="modalBtn" class="modalbtn3">Click for Recipe</button>
+                </div>
+            </div>
+            <div class="carousel_card">
+                <div class="alignmentContainer">
+                    <h4 id="titleDisplay4"></h4>
+                    <img id="imgDisplay4">
+                    <p class="drinkdescription"></p>
+                    <button id="modalBtn" class="modalbtn4">Click for Recipe</button>
+                </div>
+            </div>
+            <div class="carousel_actions">
+                <button id="carouselBtn_prev" aria-label="previous slide"><i class="fas fa-angle-double-left"></i></button>
+                <button id="carouselBtn_next" aria-label="next slide"><i class="fas fa-angle-double-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- section for the modal -->
+    <section class="modal">
+        <button id="closeBtn">X</button>
+            <p class="errorMessage">You have not selected a value, please try again</p>
+            <div class="grid">
+                <div class="card">
+                    <h4 class="modaldrinktitle" id = "name"></h4>
+                        
+                        <div class="ingredDiv">
+                            
+                            <h4>Instructions</h4>
+                                <li id="recipe"></li>
+                  
+                        </div>
+                
+                </div>
+                <div class="youtubeVideo"> 
+                    <h5>Video Tutorial</h5>
+                        <iframe height="250px" width="400px" src="">
+                        </iframe>
+                        <div class="responsible">
+                            <p>Please Drink Responsibly</p>
+                        </div>
+                </div>
+            </div>
+    </section>
+    <script src="./assets/js/script.js" async defer></script>
+    <script src="./assets/js/samsjs.js" async defer></script>
+    <script src="assets/js/carousel.js" async defer></script>
+</body>
+
+</html>
